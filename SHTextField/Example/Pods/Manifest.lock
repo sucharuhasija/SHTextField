@@ -1,0 +1,14 @@
+PODS:
+  - SHTextField (0.1.0)
+
+DEPENDENCIES:
+  - SHTextField (from `../`)
+
+EXTERNAL SOURCES:
+  SHTextField:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SHTextField: 97b2f4c80b170742e40244c523b5abad4a358b25
+
+COCOAPODS: 0.39.0

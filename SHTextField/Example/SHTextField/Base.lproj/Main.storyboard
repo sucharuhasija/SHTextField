@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SHTextField_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="3" translatesAutoresizingMaskIntoConstraints="NO" id="z8B-9F-1yd">
+                                <rect key="frame" x="20" y="28" width="560" height="29"/>
+                                <segments>
+                                    <segment title="Email"/>
+                                    <segment title="Password"/>
+                                    <segment title="DOB"/>
+                                    <segment title="UserDefined"/>
+                                </segments>
+                                <connections>
+                                    <action selector="typeChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="1Eo-sJ-ZHG"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csF-HC-Nf8">
+                                <rect key="frame" x="20" y="195" width="560" height="42"/>
+                                <color key="backgroundColor" red="0.0" green="0.78412059144374124" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="ha4-wX-HFw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <state key="normal" title="Resign First Responder">
+                                    <color key="titleColor" red="0.87185942384955784" green="0.95726318942229705" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resignResponder:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CV6-j3-038"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rT6-5m-mOO" customClass="SHTextField" customModule="SHTextField_Example" customModuleProvider="target">
+                                <rect key="frame" x="20" y="126" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LLF-L7-ICK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rT6-5m-mOO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="1aF-Qp-SyN"/>
+                            <constraint firstItem="z8B-9F-1yd" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="1zE-hg-8Q8"/>
+                            <constraint firstItem="z8B-9F-1yd" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Geb-x5-zd3"/>
+                            <constraint firstItem="csF-HC-Nf8" firstAttribute="trailing" secondItem="rT6-5m-mOO" secondAttribute="trailing" id="Ui7-wJ-bft"/>
+                            <constraint firstItem="csF-HC-Nf8" firstAttribute="leading" secondItem="rT6-5m-mOO" secondAttribute="leading" id="YMx-Mw-zBR"/>
+                            <constraint firstItem="z8B-9F-1yd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ZEV-Nz-cv6"/>
+                            <constraint firstItem="csF-HC-Nf8" firstAttribute="top" secondItem="rT6-5m-mOO" secondAttribute="bottom" constant="40" id="c7K-LB-5He"/>
+                            <constraint firstItem="rT6-5m-mOO" firstAttribute="top" secondItem="z8B-9F-1yd" secondAttribute="bottom" constant="69" id="klr-SP-GQR"/>
+                            <constraint firstItem="rT6-5m-mOO" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="swd-qU-4Dn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="segmentedControl" destination="z8B-9F-1yd" id="66H-sO-SAD"/>
+                        <outlet property="tfExample" destination="rT6-5m-mOO" id="g2o-SN-oyO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="232" y="346"/>
+        </scene>
+    </scenes>
+</document>

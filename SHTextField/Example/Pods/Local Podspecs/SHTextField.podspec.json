@@ -1,0 +1,19 @@
+{
+  "name": "SHTextField",
+  "version": "0.1.0",
+  "summary": "The Smart textfield that automatically recognise the Various type of content to be added",
+  "description": "The Smart textfield that automatically recognise the Various type of content The Smart textfield that automatically recognise the Various type of content to be added and allow to have validation check on the text enetred in it.",
+  "homepage": "https://github.com/sucharuhasija/SHTextField",
+  "license": "MIT",
+  "authors": {
+    "Sucharu Hasija": "sucharuhasija@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/sucharuhasija/SHTextField.git",
+    "tag": "0.1.0"
+  },
+  "source_files": "SHTextField/Classes/**/*",
+  "platforms": {
+    "ios": "8.0"
+  }
+}

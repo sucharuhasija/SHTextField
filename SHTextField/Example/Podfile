@@ -1,0 +1,6 @@
+use_frameworks!
+
+target 'SHTextField_Example' do
+  pod 'SHTextField', :path => '../'
+
+end
